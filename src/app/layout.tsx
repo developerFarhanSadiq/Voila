@@ -2,6 +2,7 @@
 import type { Metadata, Viewport } from 'next';
 import './globals.css';
 import { Toaster } from "@/components/ui/sonner";
+import { Analytics } from "@vercel/analytics/next"
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://voila-l7bmdddb4-farhans-projects-530e109f.vercel.app'),
@@ -87,6 +88,7 @@ export default function RootLayout({
           </p>
         </footer>
         <Toaster position="top-right" />
+        <Analytics />
       </body>
     </html>
   );
