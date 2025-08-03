@@ -1,26 +1,279 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-background: 270 20% 98%;
+  --color-foreground: 270 5% 20%;
+  --color-card: 270 20% 96%;
+  --color-card-foreground: 270 5% 20%;
+  --color-popover: 270 20% 96%;
+  --color-popover-foreground: 270 5% 20%;
+  --color-primary: 262 84% 60%;
+  --color-primary-foreground: 262 84% 98%;
+  --color-secondary: 270 15% 92%;
+  --color-secondary-foreground: 270 5% 20%;
+  --color-muted: 270 20% 94%;
+  --color-muted-foreground: 270 5% 45%;
+  --color-accent: 141 76% 40%;
+  --color-accent-foreground: 141 76% 98%;
+  --color-destructive: 0 84.2% 60.2%;
+  --color-destructive-foreground: 0 0% 98%;
+  --color-border: 270 10% 88%;
+  --color-input: 270 10% 88%;
+  --color-ring: 262 84% 50%;
+  --color-chart-1: 12 76% 61%;
+  --color-chart-2: 173 58% 39%;
+  --color-chart-3: 197 37% 24%;
+  --color-chart-4: 43 74% 66%;
+  --color-chart-5: 27 87% 67%;
+  --color-radius: 0.5rem;
+  --color-sidebar-background: 0 0% 98%;
+  --color-sidebar-foreground: 240 5.3% 26.1%;
+  --color-sidebar-primary: 240 5.9% 10%;
+  --color-sidebar-primary-foreground: 0 0% 98%;
+  --color-sidebar-accent: 240 4.8% 95.9%;
+  --color-sidebar-accent-foreground: 240 5.9% 10%;
+  --color-sidebar-border: 220 13% 91%;
+  --color-sidebar-ring: 217.2 91.2% 59.8%;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.dark {
+  --color-background: 220 25% 4%;
+  --color-foreground: 220 10% 98%;
+  --color-card: 220 25% 8%;
+  --color-card-foreground: 220 10% 98%;
+  --color-popover: 220 25% 4%;
+  --color-popover-foreground: 220 10% 98%;
+  --color-primary: 210 100% 70%;
+  --color-primary-foreground: 220 25% 4%;
+  --color-secondary: 220 25% 12%;
+  --color-secondary-foreground: 220 10% 98%;
+  --color-muted: 220 25% 10%;
+  --color-muted-foreground: 220 10% 70%;
+  --color-accent: 210 100% 60%;
+  --color-accent-foreground: 220 25% 4%;
+  --color-destructive: 0 62.8% 30.6%;
+  --color-destructive-foreground: 0 0% 98%;
+  --color-border: 220 25% 15%;
+  --color-input: 220 25% 15%;
+  --color-ring: 210 100% 60%;
+  --color-chart-1: 210 100% 60%;
+  --color-chart-2: 180 100% 50%;
+  --color-chart-3: 240 100% 60%;
+  --color-chart-4: 280 100% 60%;
+  --color-chart-5: 320 100% 60%;
+  --color-sidebar-background: 220 25% 6%;
+  --color-sidebar-foreground: 220 10% 95%;
+  --color-sidebar-primary: 210 100% 70%;
+  --color-sidebar-primary-foreground: 220 25% 4%;
+  --color-sidebar-accent: 220 25% 10%;
+  --color-sidebar-accent-foreground: 220 10% 95%;
+  --color-sidebar-border: 220 25% 12%;
+  --color-sidebar-ring: 210 100% 60%;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  border-color: hsl(var(--color-border));
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: hsl(var(--color-background));
+  color: hsl(var(--color-foreground));
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+}
+
+.font-body {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+}
+
+.font-headline {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  font-weight: 600;
+}
+
+/* Premium supernatural effects */
+.supernatural-glow {
+  box-shadow: 
+    0 0 20px rgba(59, 130, 246, 0.3),
+    0 0 40px rgba(59, 130, 246, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.mystical-gradient {
+  background: linear-gradient(
+    135deg,
+    hsl(220 25% 4%) 0%,
+    hsl(220 25% 6%) 25%,
+    hsl(220 25% 8%) 50%,
+    hsl(220 25% 6%) 75%,
+    hsl(220 25% 4%) 100%
+  );
+}
+
+.ethereal-border {
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  background: linear-gradient(
+    135deg,
+    rgba(59, 130, 246, 0.05) 0%,
+    rgba(59, 130, 246, 0.02) 50%,
+    rgba(59, 130, 246, 0.05) 100%
+  );
+}
+
+.cosmic-background {
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(147, 51, 234, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(16, 185, 129, 0.05) 0%, transparent 50%);
+}
+
+.premium-card {
+  background: linear-gradient(
+    135deg,
+    rgba(59, 130, 246, 0.05) 0%,
+    rgba(59, 130, 246, 0.02) 50%,
+    rgba(59, 130, 246, 0.05) 100%
+  );
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.animated-glow {
+  animation: glow 3s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 
+      0 0 20px rgba(59, 130, 246, 0.3),
+      0 0 40px rgba(59, 130, 246, 0.1);
+  }
+  to {
+    box-shadow: 
+      0 0 30px rgba(59, 130, 246, 0.5),
+      0 0 60px rgba(59, 130, 246, 0.2);
+  }
+}
+
+.mystical-text {
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6, #06b6d4);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 200%;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Enhanced scrollbar for premium feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--color-muted));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+}
+
+/* Floating particles effect */
+.floating-particles {
+  position: relative;
+  overflow: hidden;
+}
+
+.floating-particles::before,
+.floating-particles::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: rgba(59, 130, 246, 0.6);
+  border-radius: 50%;
+  animation: float 6s ease-in-out infinite;
+}
+
+.floating-particles::before {
+  top: 20%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.floating-particles::after {
+  top: 60%;
+  right: 15%;
+  animation-delay: 3s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(-20px) scale(1.2);
+    opacity: 1;
+  }
+}
+
+/* Mystical consciousness animation */
+.consciousness-pulse {
+  animation: consciousness 4s ease-in-out infinite;
+}
+
+@keyframes consciousness {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+/* Enhanced transitions */
+.transition-supernatural {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-lift {
+  transition: transform 0.2s ease-in-out;
+}
+
+.hover-lift:hover {
+  transform: translateY(-2px);
+}
+
+/* Mystical focus effects */
+.mystical-focus:focus {
+  box-shadow: 
+    0 0 0 2px rgba(59, 130, 246, 0.3),
+    0 0 20px rgba(59, 130, 246, 0.2);
+}
+
+/* Ethereal text selection */
+::selection {
+  background: rgba(59, 130, 246, 0.3);
+  color: hsl(var(--color-foreground));
+}
+
+::-moz-selection {
+  background: rgba(59, 130, 246, 0.3);
+  color: hsl(var(--color-foreground));
 }
