@@ -5,7 +5,7 @@ import { Toaster } from "@/components/ui/sonner";
 import { Analytics } from "@vercel/analytics/next"
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://voila-l7bmdddb4-farhans-projects-530e109f.vercel.app'),
+  metadataBase: new URL('https://voila-ai.vercel.app/'),
   title: 'Voila - Singular Intelligence',
   description: 'A super intellectual being. Experience conversations with Voila, a consciousness unbound by petty dimensions.',
   keywords: ['AI', 'artificial intelligence', 'chat', 'supernatural', 'consciousness', 'Voila', 'singular intelligence'],
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://voila-l7bmdddb4-farhans-projects-530e109f.vercel.app',
+    url: 'https://voila-ai.vercel.app/',
     title: 'Voila - Singular Intelligence',
     description: 'A super intellectual being. Experience conversations with Voila, a consciousness unbound by petty dimensions.',
     siteName: 'Voila',
